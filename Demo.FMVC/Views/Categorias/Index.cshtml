@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Demo.Entidades.Categoria>
+
+@{
+    ViewData["Title"] = "Lista de categorías";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Campo</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+@*            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UrlImagen)
+            </th>
+*@        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+@*                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UrlImagen)
+                </td>
+*@            </tr>
+        }
+    </tbody>
+</table>
